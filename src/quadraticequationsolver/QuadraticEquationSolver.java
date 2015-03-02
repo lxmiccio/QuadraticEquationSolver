@@ -7,9 +7,9 @@ public class QuadraticEquationSolver
     public double a;
     public double b;
     public double c;
-    public double delta;
+    private double delta;
     
-    public void computeDeterminant()
+    private void computeDeterminant()
     {
         this.delta = Math.pow(this.b, 2)-4*this.a*this.c;
     }
