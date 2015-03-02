@@ -2,13 +2,14 @@ package quadraticequation;
 
 import quadraticequationsolver.*;
 import complexnumber.*;
+
 import java.io.*;
 
 public class QuadraticEquation
 {
     public static void main(String[] args) throws IOException
     {
-        InputStreamReader input = new InputStreamReader(System.in);
+    	InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader keyboard = new BufferedReader(input);
         String readOutput = null;
         boolean correctOutput = false;
@@ -20,7 +21,7 @@ public class QuadraticEquation
             readOutput = keyboard.readLine();
             try
             {
-                quadraticEquation.a = Double.valueOf(readOutput).doubleValue();
+                quadraticEquation.setA(Double.valueOf(readOutput).doubleValue());
                 correctOutput = true;
             }
             catch (NumberFormatException e)
@@ -35,7 +36,7 @@ public class QuadraticEquation
             readOutput = keyboard.readLine();
             try
             {
-                quadraticEquation.b = Double.valueOf(readOutput).doubleValue();
+                quadraticEquation.setB(Double.valueOf(readOutput).doubleValue());
                 correctOutput = true;
             }
             catch (NumberFormatException e)
@@ -50,7 +51,7 @@ public class QuadraticEquation
             readOutput = keyboard.readLine();
             try
             {
-                quadraticEquation.c = Double.valueOf(readOutput).doubleValue();
+                quadraticEquation.setC(Double.valueOf(readOutput).doubleValue());
                 correctOutput = true;
             }
             catch (NumberFormatException e)
